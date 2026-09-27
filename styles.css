@@ -150,6 +150,18 @@ button { font: inherit; color: inherit; }
   flex: none;
   width: 18px;
   height: 18px;
+  transform-origin: 70% 90%;          /* pivot at the wrist */
+  animation: mqlWave 2.4s ease-in-out .6s 2;
+}
+
+/* A short hello wave, played twice on load */
+@keyframes mqlWave {
+  0%, 60%, 100% { transform: rotate(0); }
+  10% { transform: rotate(16deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(16deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
 }
 
 .mql_title {
