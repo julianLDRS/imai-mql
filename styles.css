@@ -127,9 +127,10 @@ button { font: inherit; color: inherit; }
 }
 
 .mql_logo {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: .14em;
+  display: block;
+  width: 200px;
+  height: auto;
+  margin: -4px 0 0 -7px;    /* offset the SVG's built-in padding */
 }
 
 .mql_intro { max-width: 520px; margin-top: auto; }
@@ -439,7 +440,7 @@ button { font: inherit; color: inherit; }
     padding-top: max(20px, env(safe-area-inset-top));
   }
 
-  .mql_logo { font-size: 16px; }
+  .mql_logo { width: 150px; margin: -3px 0 0 -5px; }
   .mql_eyebrow { margin-bottom: 14px; font-size: 11px; }
   .mql_title { font-size: 30px; margin-bottom: 12px; }
   .mql_lead { font-size: 14px; }
