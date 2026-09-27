@@ -146,11 +146,10 @@ button { font: inherit; color: inherit; }
   text-transform: uppercase;
   color: #d9ccff;
 }
-.mql_eyebrow::before {
-  content: "";
-  width: 24px;
-  height: 1px;
-  background: currentColor;
+.mql_eyebrow-icon {
+  flex: none;
+  width: 18px;
+  height: 18px;
 }
 
 .mql_title {
