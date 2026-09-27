@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Welcome to IMAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mql" id="mql">
+
+    <!-- LEFT: brand / intro panel -->
+    <aside class="mql_visual">
+      <!-- Drop the final image here: set src and it replaces the gradient placeholder -->
+      <img class="mql_visual-img" src="" alt="" />
+      <div class="mql_visual-bg" aria-hidden="true">
+        <span class="mql_orb is-1"></span>
+        <span class="mql_orb is-2"></span>
+        <span class="mql_orb is-3"></span>
+      </div>
+      <div class="mql_visual-overlay" aria-hidden="true"></div>
+
+      <div class="mql_visual-inner">
+        <div class="mql_logo">IMAI</div>
+
+        <div class="mql_intro">
+          <p class="mql_eyebrow">Welcome to IMAI</p>
+          <h1 class="mql_title">Let's optimize IMAI for&nbsp;you</h1>
+          <p class="mql_lead">Seven quick questions, one tap each. Your answers tune your workspace to how you work, so you see the features that fit and skip the ones that don't.</p>
+        </div>
+
+        <ul class="mql_meta">
+          <li><span class="mql_meta-dot"></span>Under 60 seconds</li>
+          <li><span class="mql_meta-dot"></span>Change anytime in settings</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- RIGHT: questions panel -->
+    <main class="mql_panel">
+      <div class="mql_panel-inner">
+
+        <header class="mql_top">
+          <button type="button" class="mql_back" id="mqlBack" aria-label="Previous question">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back
+          </button>
+          <span class="mql_count" id="mqlCount">Question 1 of 7</span>
+        </header>
+
+        <div class="mql_progress" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="1" id="mqlProgress">
+          <span class="mql_progress-bar" id="mqlProgressBar"></span>
+        </div>
+
+        <section class="mql_stage" id="mqlStage" aria-live="polite">
+          <h2 class="mql_question" id="mqlQuestion"></h2>
+          <p class="mql_hint" id="mqlHint"></p>
+          <div class="mql_options" id="mqlOptions" role="radiogroup" aria-labelledby="mqlQuestion"></div>
+        </section>
+
+        <section class="mql_done" id="mqlDone" hidden>
+          <div class="mql_done-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h2 class="mql_question">Your workspace is ready</h2>
+          <p class="mql_hint">We've tuned IMAI around your answers. You can update them anytime from settings.</p>
+          <a href="#" class="mql_cta">Go to my workspace
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </section>
+
+        <footer class="mql_footer" id="mqlFooter">
+          <a href="#" class="mql_skip">Skip for now</a>
+          <span class="mql_kbd-hint"><kbd>1</kbd>–<kbd>5</kbd> to answer</span>
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
