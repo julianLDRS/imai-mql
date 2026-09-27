@@ -63,6 +63,7 @@ button { font: inherit; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 72% 30%;   /* keep the face in frame */
   z-index: -1;
 }
 .mql_visual-img[src=""] { display: none; }
@@ -99,7 +100,10 @@ button { font: inherit; color: inherit; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(10, 7, 26, .15) 0%, rgba(10, 7, 26, .1) 40%, rgba(10, 7, 26, .78) 100%);
+  /* black tint over the photo + deeper fade behind the text */
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, .25) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, .85) 100%),
+    rgba(0, 0, 0, .45);
 }
 .mql_visual-overlay::after {           /* subtle grain for depth */
   content: "";
@@ -128,7 +132,7 @@ button { font: inherit; color: inherit; }
   letter-spacing: .14em;
 }
 
-.mql_intro { max-width: 520px; }
+.mql_intro { max-width: 520px; margin-top: auto; }
 
 .mql_eyebrow {
   margin: 0 0 20px;
@@ -381,18 +385,6 @@ button { font: inherit; color: inherit; }
   font-size: 12px;
   color: var(--ink-3);
 }
-.mql_kbd-hint kbd {
-  display: inline-block;
-  min-width: 20px;
-  padding: 1px 6px;
-  border: 1px solid var(--line);
-  border-bottom-width: 2px;
-  border-radius: 5px;
-  background: var(--surface);
-  font: 600 11px/1.5 var(--font);
-  text-align: center;
-  color: var(--ink-2);
-}
 
 /* Done */
 
@@ -452,6 +444,7 @@ button { font: inherit; color: inherit; }
   .mql_title { font-size: 30px; margin-bottom: 12px; }
   .mql_lead { font-size: 14px; }
   .mql_meta { display: none; }
+  .mql_visual-overlay { background: rgba(0, 0, 0, .62); }
 
   /* Collapse intro once the user starts answering */
   .mql_intro, .mql_visual-inner {
